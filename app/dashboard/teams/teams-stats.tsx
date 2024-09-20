@@ -1,3 +1,5 @@
+"use client";
+
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ListCheckIcon, StarIcon, UsersIcon } from "lucide-react";
+import { ListCheckIcon, PieChartIcon, StarIcon, UsersIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
@@ -20,6 +22,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import TeamDistributionChart from "./team-distribution-chart";
+import SupportTicketResolved from "./support-ticket-resolved";
 
 const teamLeaders = [
   {
@@ -85,7 +89,7 @@ export default function TeamStats() {
         </Card>
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-base flex justify-between">
+            <CardTitle className="text-base flex justify-between items-center">
               <span>Team leaders</span>
               <StarIcon className="text-yellow-500"></StarIcon>
             </CardTitle>
@@ -120,9 +124,14 @@ export default function TeamStats() {
         </Card>
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-base">Team distribution</CardTitle>
+            <CardTitle className="text-base flex justify-between items-center">
+              <span>Team distribution</span>
+              <PieChartIcon />
+            </CardTitle>
           </CardHeader>
-          <CardContent className="flex gap-2 items-center"></CardContent>
+          <CardContent className="pb-0">
+            <TeamDistributionChart />
+          </CardContent>
         </Card>
       </div>
       <Card className="my-4">
@@ -132,7 +141,9 @@ export default function TeamStats() {
             <span>Support tickets resolved</span>
           </CardTitle>
         </CardHeader>
-        <CardContent className="pl-0">Line graph</CardContent>
+        <CardContent className="pl-0">
+          <SupportTicketResolved />
+        </CardContent>
       </Card>
     </>
   );
