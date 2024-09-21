@@ -4,10 +4,11 @@ import MenuItem from "./menu-item";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import Link from "next/link";
 import { LightDarkToggle } from "@/components/ui/light-dark-toggle";
+import { cn } from "@/lib/utils";
 
-export default function MainMenu() {
+export default function MainMenu({ className }: { className?: string }) {
   return (
-    <div className="bg-muted overflow-auto p-4 flex flex-col">
+    <div className={cn("bg-muted overflow-auto p-4 flex flex-col", className)}>
       <div className="border-b dark:border-b-black border-b-zinc-300 pb-4">
         <MenuTitle />
       </div>
