@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js] Project built by Furqan Ali. The project is done to get expert in Shadcn UI, tailwind css and nextjs components
+
+The original author is different. 
+
+For more amazing repos on nextjs latest features, follow my github account and follow me over X.com and linkedin.
+
+Socials:
+[Linkedin] https://www.linkedin.com/in/iamfurqanalii/
+[X.com] https://x.com/iamfurqanalii
+[Instagram] https://www.instagram.com/iamfurqanalii/
+
 
 ## Getting Started
 
